@@ -136,8 +136,6 @@ hr {
 .img-box {
   position: relative;
   width:
-  /* bottom: 0;
-  right: 0; */
 }
 
 /********Icon********/
@@ -179,6 +177,10 @@ hr {
 #busi-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.5)),
   url("../img/Service-for-busi.jpg");
+  background-position: 50% 0%;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 #prof-img {
