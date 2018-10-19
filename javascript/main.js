@@ -4,9 +4,11 @@ $("#email").click( () =>{
   $("#email").css("marginBottom", "0px");
 });
 
+
 //SideMenu
 let move = false;
-let mobMoved = $("#mob-menu").css("width");
+let mobMoved = $("#mob-menu").css("width"); //width of mobile menu; used to determine
+                                            //how much body will move upon slide. 
 
 $("#burger").click( () => {
   if (!move){
@@ -24,7 +26,7 @@ $("#burger").click( () => {
   }
 });
 
-console.log(mobMoved)
+
 
 //Works when cardbox is of fixed width and
 
