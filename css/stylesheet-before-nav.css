@@ -133,7 +133,7 @@ hr {
 }
 /************************** MOBILE Header *****************************/
 .header {
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   line-height: 0;
   position: relative; /*to prevent gap between two header parts*/
 }
@@ -147,12 +147,14 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  top:20px;
-  right:0;
+  top:15px;
+  right:15px;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in;
   width: 60px;
   height: 60px;
   z-index: 2000;
+
 }
 
 #burger-box div {
@@ -177,16 +179,75 @@ hr {
 }
 
 /**************Sticky header***********/
-.sticky-wrapper {
-  width: 100%;
+#logo {
+  transition: width 0.2s ease-out;
 }
 
-.is-sticky #burger{
-
+.sticky-logo {
+  position: relative;
+  top: 0px;
+  width: 120px;
+  transition: width 0.2s ease-out;
+  z-index: 2;
 }
 
-.is-sticky header {
+.call {
+  transition: width 0.2 ease-out;
+}
 
+.header {
+  transition: 0.1 ease-out;
+}
+
+.sticky-call {
+  /* background-color: #0099ab; */
+  position: relative;
+  bottom: 67px;
+  left:8px;
+  text-align: center;
+  color: white;
+  z-index:1;
+  transition: 0.2s ease-in;
+}
+
+#deletey {
+  display:none;
+}
+
+.sticky-call h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing:1.6px;
+  visibility: hidden;
+}
+
+.sticky-burger {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:15px;
+  right:15px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease-in;
+  width: 60px;
+  height: 60px;
+  z-index: 2000;
+}
+
+#stickyboi {
+  width:100%;
+  z-index: 2000;
+}
+
+.sticky-on {
+  position: fixed;
+  top: 0;
+}
+
+#filler {
+  height: 197.733px;
 }
 
 /****************************MOBILE Cards ******************************/
@@ -799,7 +860,7 @@ hr {
 /*************************Media Queries************************************/
 
 /**********************************Tablet********************************/
-@media (min-width: 460px) {
+@media (min-width: 460px) { /*Include number*/
   .text-box {
     height: 140px;
   }
@@ -808,6 +869,35 @@ hr {
     width: 428px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .sticky-call h2{
+    visibility: visible;
+  }
+}
+
+/* Include call us  */
+
+@media (min-width: 530px) { /*Include Call us*/
+  .sticky-call {
+    left: 25px;
+  }
+
+  .sticky-call h2 {
+    font-size: 24px;
+    letter-spacing:0.8px;
+  }
+  #deletey {
+    display: inline;
+  }
+}
+
+
+@media (min-width: 598px) { /*Increase spacing*/
+  .sticky-call h2 {
+    font-size: 28px;
+    letter-spacing:1.6px;
+    left: 8px;
   }
 
 }

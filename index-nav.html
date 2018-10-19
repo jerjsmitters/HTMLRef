@@ -27,18 +27,21 @@
       </div>
       <header>
       <!--        Mobile Header---------------------->
-            <div class="header container">
-              <img id="logo" src="img/logo.png" />
-              <div id="burger">
-                <div id="burger-box">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="call">
-                <h2 class="calltext">CALL 0800 331 7417</h2>
-              </div>
+      <div id="stickyboi">
+        <div class="header">
+          <img id="logo" src="img/logo.png" />
+          <div id="burger">
+            <div id="burger-box">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+          <div class="call">
+            <h2 class="calltext"><span id="deletey">CALL US: </span>0800 331 7417</h2>
+          </div>
+      </div>
+
 
 
       <!--        Desktop Navbars------------------>
@@ -350,7 +353,7 @@
 
   <!-- <script> //sticky config
   $(document).ready(function(){
-    $(".header").sticky({topSpacing:0, center: true});
+    $(".header").sticky({topSpacing:0, center: true, responsiveWidth: true});
   });
 </script> -->
 <script src="javascript/main.js"></script>
