@@ -14,6 +14,7 @@ $("#burger").click( () => {
   //Problems:
   //If burger is clicked and then unclicked, menu becomes unstuck.
   //If burger is clicked and then scrolling occurs, menu becomes unstuck.
+  //Around 936px, if the menu becomes sticky, the cards becomes grossly misaligned with the rest of the document.
 
   //THE CODE BELOW IS FINE
   if (!move){
@@ -38,19 +39,19 @@ let fillVar = true;
 $(document).scroll(()=>{
   let scrollAmount = $(document).scrollTop();
   if (scrollAmount > 0) {
-    $("#stickyboi").addClass("sticky-on");
-
-    if (fillVar) { //filVar FALSE: STICK, TRUE: NOT STUCK
+    if (fillVar) { //UNSTUCK -> STUCK
+      $("#stickyboi").addClass("sticky-on");
       $('#logo').addClass('sticky-logo').removeAttr('id');
       $('.call').addClass('sticky-call').removeClass('call');
       $("body").prepend("<div id='filler'></div>");
       $('.header').css("backgroundImage", "linear-gradient(#0ce5ff, #06cbe2, #0099ab)")
                   .css('height', '92px');
       $('#burger').addClass('sticky-burger').removeAttr('id');
+      $('.card-container').addClass('card-container-fix');
       fillVar = false; //So filler is only inserted once
     }
 
-  } else {
+  } else { //STUCK->UNSTUCK
     $("#stickyboi").removeClass("sticky-on");
     $('.sticky-logo').attr('id', 'logo').removeClass('sticky-logo');
     $('.sticky-call').addClass('call').removeClass('sticky-call');
@@ -58,6 +59,7 @@ $(document).scroll(()=>{
                 .css('height', 'auto');
     $('.sticky-burger').attr('id', 'burger').removeClass('sticky-burger');
     $("#filler").remove();
+    $('.card-container').removeClass('card-container-fix');
 
     fillVar=true;
   }

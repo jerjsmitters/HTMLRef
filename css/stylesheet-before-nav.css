@@ -243,11 +243,12 @@ hr {
 
 .sticky-on {
   position: fixed;
-  top: 0;
+  top: 0px;
 }
 
 #filler {
-  height: 197.733px;
+  height: 100px;
+  width: 20px;
 }
 
 /****************************MOBILE Cards ******************************/
@@ -995,6 +996,15 @@ hr {
     content: "        /        ";
   }
 }
+/*******************MQ to fix card displacement*****************************/
+@media (min-width: 934px) {
+  .card-container-fix {
+    position: relative;
+    right: 110px;
+    top: -9px;
+  }
+}
+
 /***************************************DESKTOP MQ************************************/
 @media (min-width: 992px) {
   /****hiding mobile features****/
@@ -1008,6 +1018,10 @@ hr {
 
   #mob-menu {
     display: none;
+  }
+
+  .card-container-fix{
+    position: static;
   }
 
   /*************************************D-Base Styles***************************/
