@@ -17,6 +17,7 @@ a {
 
 body {
   font-family: 'Lato', Helvetica, Arial, sans-serif;
+  position: relative;
 }
 
 ul {
@@ -31,7 +32,9 @@ hr {
   border-top: 1px solid #00c7de;
 }
 
-/***sticky live chat*****/
+
+
+/**********************************sticky live chat*****************/
 #sticky-chat {
   float: left;
   background-color: #d4ce39;
@@ -66,7 +69,7 @@ hr {
   z-index: 5;
 }
 
-/***Desktop only*****/
+/****************************Desktop only *****************************/
 #page-nav,
 #main-nav {
   display: none;
@@ -76,10 +79,60 @@ hr {
   display:none;
 }
 
+/*************************MOBILE menu*********************************/
 
-/************************************ Header *****************************/
+#darken {
+  background-color: rgba(0,0,0,0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.1s ease-out;
+}
+#main-body {
+  transition: right 0.2s ease-in;
+  position: relative;
+  right: 0;
+}
+
+#mob-menu {
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  width: 200px;
+  height: 100vh;
+  z-index: 1000;
+  padding-top: 30px;
+  right: -200px;
+  transition: right 0.2s ease-in;
+  background-color: rgb(0, 153, 171);
+  color: white;
+
+}
+
+#mob-menu>ul {
+  width:85%;
+}
+
+#mob-menu li { /*not the cause*/
+  width: 170px;
+  padding: 20px;
+  padding-right: 30px;
+  padding-left: 10px;
+  margin: 0 auto;
+  border-bottom: solid 1px rgba(255,255,255,0.5);
+  letter-spacing: 1.4px;
+  font-size: 14px;
+  }
+
+#mob-menu li:last-of-type{
+  border-bottom:none;
+}
+/************************** MOBILE Header *****************************/
 .header {
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   line-height: 0;
   position: relative; /*to prevent gap between two header parts*/
 }
@@ -93,21 +146,22 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  top:20px;
-  right:0;
+  top:15px;
+  right:15px;
   background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in;
   width: 60px;
   height: 60px;
+  z-index: 2000;
+
 }
 
-
-#burger-box div{
+#burger-box div {
   width: 32px;
   height: 4px;
   background-color: white;
   margin: 7px 0;
 }
-
 
 .call {
   background-color: #0099ab;
@@ -123,10 +177,83 @@ hr {
   font-weight: normal;
 }
 
-/*********************************** Cards ******************************/
+/**************Sticky header***********/
+#logo {
+  transition: width 0.2s ease-out;
+}
+
+.sticky-logo {
+  position: relative;
+  top: 0px;
+  width: 120px;
+  transition: width 0.2s ease-out;
+  z-index: 2;
+}
+
+.call {
+  transition: width 0.2 ease-out;
+}
+
+.header {
+  transition: 0.1 ease-out;
+}
+
+.sticky-call {
+  /* background-color: #0099ab; */
+  position: relative;
+  bottom: 67px;
+  left:8px;
+  text-align: center;
+  color: white;
+  z-index:1;
+  transition: 0.2s ease-in;
+}
+
+#deletey {
+  display:none;
+}
+
+.sticky-call h2 {
+  display: inline-block;
+  font-size: 28px;
+  font-weight: normal;
+  letter-spacing:1.6px;
+  visibility: hidden;
+}
+
+.sticky-burger {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top:15px;
+  right:15px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: background-color 0.3s ease-in;
+  width: 60px;
+  height: 60px;
+  z-index: 2000;
+}
+
+#stickyboi {
+  width:100%;
+  z-index: 2000;
+  height:190px;
+}
+
+.sticky-on {
+  position: fixed;
+  top: 0px;
+}
+
+#filler {
+
+}
+
+/****************************MOBILE Cards ******************************/
 /******Base styles******/
 .card-container {
-  margin-top: 76px;
+  margin-top: 60px;
 }
 
 .card {
@@ -135,7 +262,7 @@ hr {
 
 .img-box {
   position: relative;
-  width:
+
 }
 
 /********Icon********/
@@ -177,10 +304,6 @@ hr {
 #busi-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.5)),
   url("../img/Service-for-busi.jpg");
-  background-position: 50% 0%;
-  background-repeat: no-repeat;
-  background-size: cover;
-
 }
 
 #prof-img {
@@ -224,12 +347,13 @@ hr {
   font-weight: 500;
   letter-spacing: 0.08em;
   line-height: 1.15em;
-  height: 201.5px;
+  height: 165px;
 }
 
 .text-box p {
   padding: 0.6rem 1rem 2rem;
   text-align: justify;
+  margin-top: 0px;
 }
 
 /*******Read more********/
@@ -263,7 +387,7 @@ hr {
   text-decoration: underline;
 }
 
-/*********** main content ****************/
+/******************* MOBILE main content **************************/
 
 .welcome h1 {
   color: #0099ab;
@@ -309,7 +433,7 @@ hr {
   width: 100%;
 }
 
-/*****quotes*****/
+/*************quotes**************/
 .quote-box {
   margin: 1.8rem 0;
 }
@@ -328,7 +452,7 @@ hr {
   left: 95%;
 }
 
-/****Buttons following content***/
+/********Buttons following content******/
 .button-box a {
   display:block;
   padding: 0.85rem 0;
@@ -365,7 +489,7 @@ hr {
   text-decoration: none;
 }
 
-/***********************************Side Bar*****************************/
+/*************************MOBILE Side Bar*****************************/
 
 /***Yellow Buttons****/
 .sidebtn-box {
@@ -496,12 +620,7 @@ hr {
   position: relative;
 }
 
-.business-hc h3 img {
-  width: 22px;
-  position: absolute;
-  right: 15px;
-  bottom: 50%;
-}
+
 
 .business-hc-cont {
   border: #0099ab solid 1px;
@@ -552,7 +671,7 @@ hr {
 #email {
   display: block;
   width: 90%;
-  margin: 0 5% 0 5%;
+  margin: 0 5% 10px 5%;
 
   padding: 8px 0 8px 10px;
   background-color: #ddd;
@@ -569,8 +688,10 @@ hr {
   padding: 8px 0 8px 10px;
   font-size: 12px;
   color: white;
-  margin: 10px 5% 14px 5%;
-  border: none;
+  margin: 10px 5% 10px 5%;
+  border: 1px solid transparent;
+  display: none;
+  transition: height 1s ease-out;
 }
 
 /***** Button Trio*****/
@@ -633,7 +754,7 @@ hr {
   background-color: #c43220;
 }
 
-/********credentials********/
+/********************* MOBILE Clients*********************/
 .cred h3 {
   display: inline-block;
   color: rgb(0, 153, 171);
@@ -667,7 +788,7 @@ hr {
   margin-bottom: 25px;
 }
 
-/*********************************FOOTER**************************************/
+/*************************MOBILE FOOTER**************************************/
 /*******footer-main********/
 .footer-main {
   background-color: #415b6c;
@@ -701,12 +822,16 @@ hr {
   width: 260px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .footer-social-media a {
   font-size: 29px;
   color: white;
+  transition: color 0.5s ease-out;
+}
+
+.footer-social-media a:hover {
+  color: #aaa;
 }
 
 /******footer-nav***********/
@@ -735,15 +860,86 @@ hr {
 /*************************Media Queries************************************/
 
 /**********************************Tablet********************************/
-@media (min-width: 768px) {
+@media (min-width: 460px) { /*Include number*/
+  .text-box {
+    height: 140px;
+  }
 
+  .card-container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .sticky-call h2{
+    visibility: visible;
+  }
+}
+
+/* Include call us  */
+
+@media (min-width: 530px) { /*Include Call us*/
+  .sticky-call {
+    left: 25px;
+  }
+
+  .sticky-call h2 {
+    font-size: 24px;
+    letter-spacing:0.8px;
+  }
+  #deletey {
+    display: inline;
+  }
+}
+
+
+@media (min-width: 598px) { /*Increase spacing*/
+  .sticky-call h2 {
+    font-size: 28px;
+    letter-spacing:1.6px;
+    left: 8px;
+  }
+
+}
+
+@media (min-width:658px) {
+  .text-box {
+    height: 110px;
+  }
+
+
+
+  #mob-menu {
+    width: 330px;
+    height: 100vh;
+    padding-top: 30px;
+    right: -330px;
+  }
+
+  #mob-menu>ul {
+    width:70%;
+  }
+
+  #mob-menu li {
+    width: auto;
+    padding: 20px;
+    padding-right: 50px;
+    padding-left: 10px;
+    margin: 0 auto;
+    letter-spacing: 1.5px;
+    font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) {
   .container {
     width: 720px;
     margin-left: auto;
     margin-right: auto;
   }
 
-/****cards****/
+
+/************************************TABLET cards****************/
 
   .card-container {
     display: flex;
@@ -760,7 +956,11 @@ hr {
     margin-top: 28px;
   }
 
-/******welcome*******/
+  .text-box {
+    height: 140px;
+  }
+
+/*********************TABLET welcome********************************/
   .welcome h1 {
     margin-top: 0;
   }
@@ -787,7 +987,7 @@ hr {
   #call-btn {
     margin-right: 20px;
   }
-  /*******footer********/
+  /**************** TABLET footer*******************************************/
   .footer-nav a {
     font-size: 14px;
   }
@@ -796,7 +996,16 @@ hr {
     content: "        /        ";
   }
 }
-/*******************************DESKTOP MQ************************************/
+/*******************MQ to fix card displacement*****************************/
+@media (min-width: 934px) {
+  .card-container-fix {
+    position: relative;
+    right: 110px;
+    top: -9px;
+  }
+}
+
+/***************************************DESKTOP MQ************************************/
 @media (min-width: 992px) {
   /****hiding mobile features****/
   #burger {
@@ -807,15 +1016,23 @@ hr {
     display: none;
   }
 
-  /*****************Base Styles***************************/
+  #mob-menu {
+    display: none;
+  }
+
+  .card-container-fix{
+    position: static;
+  }
+
+  /*************************************D-Base Styles***************************/
   .container {
     width:980px;
     margin: 0 auto;
-    padding: 0 10px;
+
   }
 
 
-  /**************************Header*********************/
+  /******************************************D-Header*********************/
   .header {
     position: relative;
     width: 940px;
@@ -829,33 +1046,37 @@ hr {
     height: 140.5px;
   }
 
-  /*************top  nav***************/
+  /**********************************D-top nav*****************************/
   #main-nav {
     display: flex;
     position: relative;
     bottom: 152px;
-    left: 220px;
+    left: 218px;
   }
 
-  #main-nav li {
+  #main-nav>a,
+  #about-us>a,
+  #news>a {
+    display: block;
     padding: 0px 12px;
     height: 50px;
     line-height: 48px;
     position: relative;
+    z-index: 400;
     display: block;
     text-align: center;
     font-size:12px;
-    letter-spacing: 1px;
-    font-weight: bold;
+    letter-spacing: 1.2px;
+    font-weight: 600;
     color: white;
     background-color:#0099ab;
   }
 
-  #main-nav li:first-of-type { /****home****/
+  #main-nav>a:first-of-type { /**************home***********/
     width: 80px;
   }
 
-  #main-nav li:first-of-type::before {
+  #main-nav>a:first-of-type::before {
     content: '';
     position: absolute;
     display: block;
@@ -866,10 +1087,10 @@ hr {
   }
 
 
-  #main-nav li:nth-of-type(6) { /***contact us***/
+  #main-nav>a:nth-of-type(4) { /**********contact us**********/
     margin-right:50px;
   }
-  #main-nav li:nth-of-type(6)::after {
+  #main-nav>a:nth-of-type(4)::after {
     content: '';
     position: absolute;
     display: block;
@@ -879,7 +1100,7 @@ hr {
     border-right: 48px solid transparent;
   }
 
-  #main-nav li:nth-of-type(7) { /***magnifying glass**/
+  #main-nav>a:nth-of-type(5) { /********magnifying glass*****/
     margin-right: 50px;
     left: -12px;
     width: 2px;
@@ -888,7 +1109,7 @@ hr {
     background-color: #00c7de;
   }
 
-  #main-nav li:nth-of-type(7) img {
+  #main-nav>a:nth-of-type(5) img {
     position: relative;
     bottom: 44px;
     left:-12px;
@@ -897,7 +1118,7 @@ hr {
 
   }
 
-  #main-nav li:nth-of-type(7)::before {
+  #main-nav>a:nth-of-type(5)::before {
     content: '';
     position: absolute;
     display: block;
@@ -907,7 +1128,7 @@ hr {
     border-right: 48px solid #00c7de;
   }
 
-  #main-nav li:nth-of-type(7)::after {
+  #main-nav>a:nth-of-type(5)::after {
     content: '';
     position: absolute;
     display: block;
@@ -917,16 +1138,15 @@ hr {
     border-right: 48px solid transparent;
   }
 
-  #main-nav li:last-of-type { /****contact number******/
+  #main-nav>a:last-of-type { /****contact number******/
     background-color: #415b6c;
     font-size: 18px;
     left: -24px;
     display: flex;
     flex-grow: 2;
-
   }
 
-  #main-nav li:last-of-type::before {
+  #main-nav>a:last-of-type::before {
     content: '';
     position: absolute;
     display: block;
@@ -936,39 +1156,281 @@ hr {
     border-right: 48px solid #415b6c;
   }
 
-  /*********animations********/
-  #main-nav li:nth-child(-n+6):hover {
+  /***************Desktop Main-nav Dropdowns*****************/
+  #about-us,
+  #news {
+    position:relative;
+  }
 
+  #about-us-dropdown,
+  #news-dropdown {
+    display: none;
+    position:absolute;
+    top: 50px;
+    z-index: 404;
+    height: 120px;
+    background-color: white;
+    box-shadow: 0px 0px 5px #999;
+    border-top: none;
+  }
+
+  #about-us-dropdown a li,
+  #news-dropdown a li {
+    height: 40px;
+    padding-left: 12px;
+    line-height: 40px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #666;
+  }
+
+  #about-us-dropdown,
+  #about-us-dropdown a li {
+      width: 220px;
+  }
+
+  #news-dropdown,
+  #news-dropdown a li {
+    width: 255.45px;
+  }
+
+#about-us-dropdown a li,
+#news-dropdown a li {
+  height: 40px;
+  padding-left: 12px;
+  line-height: 40px;
+  letter-spacing: 1px;
+  font-size: 13px;
+  color: #666;
+}
+
+  /****************Desktop Main-nav animations*******************/
+  #main-nav>a:nth-child(-n+6):hover,
+  #about-us>a:hover,
+  #news>a:hover {
+    background-color: #005C6E;
+  }
+
+  #main-nav>a:first-of-type:hover::before {
+    border-right-color: #005C6E;
+  }
+
+  #main-nav>a:nth-of-type(4):hover::after {
+    border-bottom-color: #005C6E;
+  }
+
+  #main-nav>a:nth-of-type(5):hover {
+    background-color: #1AE1F8;
+  }
+  #main-nav>a:nth-of-type(5):hover::before {
+    border-right-color: #1AE1F8;
+  }
+  #main-nav>a:nth-of-type(5):hover::after {
+    border-bottom-color: #1AE1F8;
+  }
+
+  #about-us:hover #about-us-dropdown,
+  #news:hover #news-dropdown {
+    display: block;
+  }
+
+  #about-us-dropdown li:hover,
+  #news-dropdown li:hover {
+    background-color: #E6E6E6;
+  }
+
+  #about-us-dropdown li,
+  #news-dropdown li{
+    transition: background-color 0.2s ease-out;
   }
 
 
-
-  /********secondary nav**********/
+  /**************************Desktop secondary nav*****************************/
 
     #page-nav {
     display: flex;
     position: relative;
-    bottom: 110px;
-    left: 190px;
+    bottom: 153px;
+    left: 196px;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-start;
     width: 722px;
-
   }
 
-  #page-nav li {
+  #page-nav>a,
+  #services>a,
+  #insolv>a,
+  #cred>a {
     line-height: normal;
     width: auto;
-    margin: 0 13px;
-    height: 75%;
-    padding-top: 2px;
+    /* margin: 0 13px; */
+    height: 102px;
+    padding: 0 15px;
     font-size: 13px;
-    letter-spacing: 1px;
+    line-height: 100px;
+    letter-spacing: 1.2px;
     color: #415b6c;
     font-weight: 600;
   }
 
-  /*****Image overlay*******/
+  #services>a,
+  #insolv>a,
+  #cred>a {
+    height:104px;
+    display: inline-block;
+  }
+
+  /******Dropdown******/
+
+  #services,
+  #insolv,
+  #cred {
+    position: relative;
+  }
+
+  #services-dropdown,
+  #insolv-dropdown,
+  #cred-dropdown {
+    position: absolute;
+    top: 103px;
+    display:none;
+    justify-content: flex-start;
+    z-index:500;
+    background-color:white;
+    border-top: 5px solid #415b6c;
+  }
+
+  #services-dropdown {
+    left:-220px;
+    width: 970px;
+    height: 283.5px;
+  }
+
+  #insolv-dropdown {
+    left: -45px;
+    width: 298px;
+    height: 107.45px;
+  }
+
+  #cred-dropdown {
+    left: -45px;
+    width: 230.3px;
+    height: 300.65px;
+  }
+
+  #services::after, /********dropdown arrows*******/
+  #insolv::after,
+  #cred::after {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(to left top, transparent 50%, white 50%);
+    border-top: 5px solid #415b6c;
+    border-left: 5px solid #415b6c;
+    position: absolute;
+    z-index: 500;
+    bottom: -23px;
+    transform: rotate(45deg);
+    display:none;
+  }
+
+  #services::after {
+    left:22px;
+  }
+  #insolv::after {
+    left:80px;
+  }
+  #cred::after {
+    left:45px;
+  }
+
+  #services-dropdown ul li,
+  #insolv-dropdown ul li,
+  #cred-dropdown ul li {
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(65, 91, 108);
+    list-style: disc;
+    list-style-position: inside;
+    padding: 5px 10px 5px 20px;
+    height: 25.15px;
+    line-height: 15.15px;
+  }
+
+  #services-dropdown ul li {
+    width: 242.5px;
+  }
+  #insolv-dropdown ul li {
+    width: 298px;
+  }
+  #cred-dropdown ul li {
+    width: 230.3px;
+  }
+
+  #cred-dropdown ul a:last-child li{
+    line-height: 18px;
+  }
+
+  #services-dropdown a:first-child li,
+  #insolv-dropdown a:first-child li,
+  #cred-dropdown a:first-child li{
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    list-style: none;
+    background-color: #0099ab;
+    color:white;
+    height: 37.15px;
+    line-height: 27.15px;
+    margin: 5px 0;
+    position:relative;
+
+  }
+
+  /*********Animations*******/
+
+    #page-nav a:nth-child(-n+3):hover {
+      background-color: #0099ab;
+      color: white;
+      text-decoration: none;
+      border-bottom: solid 5px #0099ab;
+    }
+
+    #page-nav a:nth-child(n+4):hover {
+      border-bottom: solid 3px #0099ab;
+      background-color: #E6E6E6;
+    }
+
+    #services:hover #services-dropdown,
+    #insolv:hover #insolv-dropdown,
+    #cred:hover #cred-dropdown {
+      display:flex;
+    }
+
+    #services-dropdown li,
+    #insolv li,
+    #cred-dropdown li {
+      transition: background-color 0.2s ease-out;
+    }
+
+    #services-dropdown li:hover,
+    #insolv li:hover,
+    #cred-dropdown li:hover{
+      background-color: #415b6c;
+    }
+
+    li:hover .disap-bp {
+      color:white;
+    }
+
+    #services:hover::after,
+    #insolv:hover::after,
+    #cred:hover::after {
+      display:block;
+    }
+
+
+
+  /********************* Desktop Image overlay*************************************/
   #overlay-box {
     display: block;
     position: relative;
@@ -1007,7 +1469,8 @@ hr {
 
     #overlay-btn {
       display: inline-block;
-      padding: 18px 35px;
+      position: relative;
+      padding: 18px 50px 18px 35px;
       margin-top: 48px;
       background-color: #0099ab;
       color: white;
@@ -1019,10 +1482,21 @@ hr {
       transition: background-color 0.3s ease-in;
     }
 
+    #overlay-btn::after {
+      content:'';
+      display: block;
+      background-image: url('../img/icons/arrow.svg');
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 202px;
+      bottom: 8px;
+      width: 30px;
+      height: 30px;
+    }
   /******Cards*********/
   .card-container {
     margin-top: 80px;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     max-width: none;
   }
@@ -1033,9 +1507,10 @@ hr {
 
   .text-box {
     width: 455px;
+    height: 130px;
   }
 
-/*******Two column layout******/
+/*******************************DESKTOP Two column layout****************/
 /******Base styles*******/
   .columns {
     display: flex;
@@ -1057,16 +1532,23 @@ hr {
   .cred h3 {
     margin-top: 0;
   }
-  .cred p{
+  .cred p {
     width: 940px;
   }
 }
 
 
-
+/********************************XL DESKTOP MQ**************************************************/
 @media (min-width:1262px) {
 
-  /***********header*****************/
+
+  /********************************XL header***************************/
+  .container {
+    width:980px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
   .header {
     height: 177px;
     width:1200px;
@@ -1076,20 +1558,20 @@ hr {
   #logo {
     width: 233px;
     height: 100%;
-
   }
 
   #main-nav {
-    bottom: 187px;
-    left: 310px;
+    bottom: 177px;
+    left: 290px;
   }
 
-  #main-nav li {
-    font-size:16px;
+  #main-nav a {
+    font-size:15px;
+    letter-spacing: 1.8px;
     padding: 0 14px;
   }
 
-  #main-nav li:nth-of-type(7) img {
+  #main-nav>a:nth-of-type(5) img {
     position: relative;
     bottom: 44px;
     left:-16px;
@@ -1097,33 +1579,64 @@ hr {
     font-weight: 700px;
     z-index: 200;
   }
-  #main-nav li:last-of-type {
+
+  #main-nav>a:last-of-type {
     font-size: 28px;
     font-weight: 500;
   }
 
-
   #page-nav {
-    bottom: 128px;
+    bottom: 177px;
     left: 400px;
+    height: 128px;
   }
 
-  #page-nav li {
+  #page-nav a {
     font-size: 13px;
-    font-weight: bold;
-    letter-spacing: 0.8px;
-    line-height: 19px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    line-height: 128px;
+    height: 128px;
   }
 
+  /****drop downs*****/
+  #services-dropdown,
+  #insolv-dropdown,
+  #cred-dropdown {
+    top: 127px;
+  }
+  #services-dropdown {
+    width: 1230px;
+    height: 283.5px;
+    left: -420px;
+  }
 
-  /***************overlay**********/
+  #services-dropdown ul li {
+    width: 307.5px;
+    letter-spacing: 0.2px;
+  }
+
+  #insolv-dropdown ul li,
+  #cred-dropdown ul li {
+    letter-spacing: 0.2px;
+  }
+
+  /****animations*****/
+
+
+  /***************************XL desktop overlay********************************/
   #overlay-content-box {
     width: 1230px;
   }
 
-  /*************cards************/
+  /*****************************XL desktop cards********************************/
   .container {
     width: 1230px;
+  }
+
+  .card-container {
+    padding:0;
+    margin-top: 70px;
   }
 
   .img-box,
@@ -1135,12 +1648,22 @@ hr {
   .card:nth-of-type(4) .img-box {
     margin-top: 0px;
   }
-  /*******Two column layout******/
+
+  .text-box {
+    height: 170px;
+  }
+
+  .text-box:nth-of-type(2) {
+    letter-spacing: 0.8px;
+  }
+
+  /************************ XL Desktop Two column layout*********************/
 
   .welcome {
     width: 922.5px;
     padding: 0;
     margin-left: 0;
+    margin-right: 40px;
   }
 
   .quote-vid-box {
@@ -1172,4 +1695,7 @@ hr {
     margin-right:0;
   }
 
+  .cred {
+    margin: 50px auto 30px;
+  }
 }
