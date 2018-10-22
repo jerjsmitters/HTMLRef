@@ -191,11 +191,7 @@ hr {
 }
 
 .call {
-  transition: width 0.2 ease-out;
-}
-
-.header {
-  transition: 0.1 ease-out;
+  transition: width 0.2s ease-out;
 }
 
 .sticky-call {
@@ -210,7 +206,7 @@ hr {
 }
 
 #deletey {
-  display:none;
+  display: none;
 }
 
 .sticky-call h2 {
@@ -246,9 +242,6 @@ hr {
   top: 0px;
 }
 
-#filler {
-
-}
 
 /****************************MOBILE Cards ******************************/
 /******Base styles******/
@@ -996,7 +989,7 @@ hr {
     content: "        /        ";
   }
 }
-/*******************MQ to fix card displacement*****************************/
+/*******************************MQ to fix card displacement*****************************/
 @media (min-width: 934px) {
   .card-container-fix {
     position: relative;
@@ -1007,8 +1000,10 @@ hr {
 
 /***************************************DESKTOP MQ************************************/
 @media (min-width: 992px) {
-  /****hiding mobile features****/
-  #burger {
+  /****hiding mobile features & fixes****/
+  #burger,
+  .sticky-burger,
+  .sticky-call {
     display: none;
   }
 
@@ -1028,20 +1023,19 @@ hr {
   .container {
     width:980px;
     margin: 0 auto;
-
   }
 
 
   /******************************************D-Header*********************/
+/****Unstuck Header****/
   .header {
     position: relative;
-    width: 940px;
+    margin-top:10px;
     height: 140.5px;
-    margin-top: 10px;
-    /* margin-bottom: ; */
-  }
 
-  .header img {
+    }
+
+  #logo {
     width: 185px;
     height: 140.5px;
   }
@@ -1070,6 +1064,19 @@ hr {
     font-weight: 600;
     color: white;
     background-color:#0099ab;
+  }
+
+  #main-nav::after {
+    content: "";
+    display: block;
+    background-color: #415b6c;
+    height: 50px;
+    width: 700px;
+    position: absolute;
+    right: -600px;
+    top:0px;
+    /* width: 1000px; */
+
   }
 
   #main-nav>a:first-of-type { /**************home***********/
@@ -1110,9 +1117,9 @@ hr {
   }
 
   #main-nav>a:nth-of-type(5) img {
-    position: relative;
-    bottom: 44px;
-    left:-12px;
+    position: absolute;
+    bottom: 15px;
+    left:0px;
     width:22px;
     z-index: 200;
 
@@ -1156,7 +1163,7 @@ hr {
     border-right: 48px solid #415b6c;
   }
 
-  /***************Desktop Main-nav Dropdowns*****************/
+  /******* Main-nav Dropdowns*****************/
   #about-us,
   #news {
     position:relative;
@@ -1204,7 +1211,7 @@ hr {
   color: #666;
 }
 
-  /****************Desktop Main-nav animations*******************/
+  /*******Main-nav animations*******************/
   #main-nav>a:nth-child(-n+6):hover,
   #about-us>a:hover,
   #news>a:hover {
@@ -1242,6 +1249,41 @@ hr {
   #about-us-dropdown li,
   #news-dropdown li{
     transition: background-color 0.2s ease-out;
+  }
+
+/*****************sticky main-nav*******************/
+  #stickyboi {
+    height: auto;
+  }
+
+  .sticky-on { /***config of whole sticky wrapper***/
+    position: fixed;
+    top: 0px;
+  }
+
+  .sticky-on #page-nav {
+    display: none;
+  }
+
+  .sticky-header {
+    position: relative;
+    height: 50px;
+    background-color: rgba(255,255,255,0.4);
+
+  }
+
+  .sticky-on #main-nav {
+    margin-top: 0px;
+    position: relative;
+    bottom: 104%;
+    left: 200px;
+  }
+
+  .sticky-logo {
+    width: 65.5px;
+    background-color: rgba(255,255,255,0.05);
+
+
   }
 
 
@@ -1538,11 +1580,11 @@ hr {
 }
 
 
-/********************************XL DESKTOP MQ**************************************************/
+/********************************L DESKTOP MQ**************************************************/
 @media (min-width:1262px) {
 
 
-  /********************************XL header***************************/
+  /********************************L header***************************/
   .container {
     width:980px;
     margin: 0 auto;
@@ -1551,8 +1593,9 @@ hr {
 
   .header {
     height: 177px;
-    width:1200px;
-    padding: 0 10px;
+    /* width:1200px; */
+    /* padding: 0 10px; */
+    margin-top: 0;
   }
 
   #logo {
@@ -1571,14 +1614,14 @@ hr {
     padding: 0 14px;
   }
 
-  #main-nav>a:nth-of-type(5) img {
+  /* #main-nav>a:nth-of-type(5) img {
     position: relative;
     bottom: 44px;
     left:-16px;
     width:24px;
     font-weight: 700px;
     z-index: 200;
-  }
+  } */
 
   #main-nav>a:last-of-type {
     font-size: 28px;
@@ -1624,12 +1667,12 @@ hr {
   /****animations*****/
 
 
-  /***************************XL desktop overlay********************************/
+  /***************************L desktop overlay********************************/
   #overlay-content-box {
     width: 1230px;
   }
 
-  /*****************************XL desktop cards********************************/
+  /*****************************L desktop cards********************************/
   .container {
     width: 1230px;
   }
@@ -1697,5 +1740,15 @@ hr {
 
   .cred {
     margin: 50px auto 30px;
+  }
+}
+
+@media (min-width: 1550px) {
+  #main-nav {
+    left: 400px;
+  }
+
+  .sticky-on #main-nav {
+    left: 400px;
   }
 }
