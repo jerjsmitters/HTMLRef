@@ -34,7 +34,7 @@ $(document).scroll(()=>{
   if (vpWidth < 992) {
     scrollStart = 40;
   } else{
-    scrollStart = 150;
+    scrollStart = 120;
   }
   if (scrollAmount > scrollStart) {
     if (fillVar) { //UNSTUCK -> STUCK

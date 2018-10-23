@@ -75,9 +75,7 @@ hr {
   display: none;
 }
 
-#overlay-box{
-  display:none;
-}
+
 
 /*************************MOBILE menu*********************************/
 
@@ -464,7 +462,7 @@ hr {
   transition: background-color 0.3s ease-in;
 }
 #call-btn:hover,
-#overlay-btn:hover {
+#ob-1-btnn:hover {
   background-color: #02b5c9;
   text-decoration: none;
 }
@@ -1473,71 +1471,180 @@ hr {
 
 
   /********************* Desktop Image overlay*************************************/
-  #overlay-box {
+  /****Overlay base********/
+  .owl-carousel {
+    bottom:46px;
+  }
+
+  .owl-stage-outer {
+    width:100vw;
+  }
+
+  .owl-item {
+    border-top:2px solid rgba(47, 44, 44, 0.64);
+    border-bottom:2px solid rgba(47, 44, 44, 0.64);
+  }
+
+  .owl-dots{
+    display:none;
+  }
+
+  .owl-prev{
+    left: 2%;
+    z-index: 1;
+  }
+  .owl-next {
+    right: 2%;
+    z-index: 1;
+  }
+
+  .owl-next::after,
+  .owl-prev::after {
+    content:'';
+    height: 25px;
+    width: 25px;
+    border-radius: 30px;
+    position: absolute;
+    bottom: 1px;
+    z-index:-1;
+    transition: 0.4s ease-out;
+  }
+  .owl-next::after{
+    left:-9px;
+  }
+  .owl-prev::after {
+    left:-6px;
+  }
+
+  .owl-prev:hover::after,
+  .owl-next:hover::after   {
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  /****General*****/
+  .ob {
     display: block;
     position: relative;
-
-    background-image:
-    linear-gradient(rgb(0, 153, 171, 0.2), rgb(0, 153, 171, 0.2)),
-    url('../img/image-overlay.jpg');
-    background-position: 50% 0%;
-    background-repeat: no-repeat;
-    background-size: 2200px 100%;
-    height: 402px;
+    height: 430px;
     margin-left: auto;
     margin-right: auto;
-    padding: 52px 0;
   }
 
-  #overlay-content-box {
+  .ocb {
+    width: 800px;
     margin: 0 auto;
-    padding: 0px 10px;
-    width: 970px;
   }
-
-  #overlay-box p {
+  .ocb p{
+    margin-top:0;
     margin-bottom: 0;
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0.8px;
     color: white;
+    text-shadow:
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000;
   }
 
-    #overlay-emph {
-      font-size:40px;
-      line-height: 56px;
-      font-weight: 600;
-    }
+  .overlay-emph {
+    font-size:40px;
+    line-height: 56px;
+    font-weight: 600;
+  }
 
-    #overlay-btn {
-      display: inline-block;
-      position: relative;
-      padding: 18px 50px 18px 35px;
-      margin-top: 48px;
-      background-color: #0099ab;
-      color: white;
-      box-shadow: 0px 2px #00555e;
-      border-radius: 3px;
-      font-size: 14px;
-      font-weight: bold;
-      letter-spacing: 1px;
-      transition: background-color 0.3s ease-in;
-    }
+  .ob-btn {
+    display: inline-block;
+    position: relative;
+    background-color: #0099ab;
+    color: white;
+    box-shadow: 0px 2px #00555e;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease-in;
+  }
 
-    #overlay-btn::after {
-      content:'';
-      display: block;
-      background-image: url('../img/icons/arrow.svg');
-      background-repeat: no-repeat;
-      position: absolute;
-      left: 202px;
-      bottom: 8px;
-      width: 30px;
-      height: 30px;
-    }
+  /*******Image one******/
+
+  #ob-1 {
+    background-image:
+    linear-gradient(rgba(0, 153, 171, 0.5), rgba(0, 153, 171, 0.2)),
+    url('../img/image-overlay.jpg');
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: 2200px 100%;
+    padding: 80px 0 0;
+  }
+
+  #ocb-1 {
+    padding: 0px 10px;
+  }
+
+  #ob-1-btn {
+    margin-top: 50px;
+    padding: 18px 50px 18px 35px;
+  }
+
+  #ob-1-btn::after {
+    content:'';
+    display: block;
+    background-image: url('../img/icons/arrow.svg');
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 202px;
+    bottom: 8px;
+    width: 30px;
+    height: 30px;
+  }
+
+  #extraEmph{
+    margin-top: 16px;
+    font-size: 46px;
+  }
+  /******Image two*******/
+  #ob-2 {
+    background-image: linear-gradient(rgba(0, 153, 171, 0.55), rgba(0, 153, 171, 0.3)),
+                      url("../img/meeting.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    padding-top: 70px;
+  }
+
+  #ocb-2 {
+
+  }
+
+  #ob-2-btn {
+    margin-top: 50px;
+    padding: 18px 35px;
+  }
+/******Image three*******/
+#ob-3 {
+  background-image: linear-gradient(rgba(0, 153, 171, 0.55), rgba(0, 153, 171, 0.3)),
+                    url("../img/piggy.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 80px;
+}
+
+  #ob-3-btn-1,
+  #ob-3-btn-2 {
+    padding: 18px 35px;
+    margin-top:40px;
+  }
+
+  #ob-3-btn-1{
+    margin-left: 44px;
+    margin-right: 20px;
+  }
+
   /******Cards*********/
   .card-container {
-    margin-top: 80px;
+    margin-top: 10px;
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: none;
@@ -1609,7 +1716,7 @@ hr {
   }
 
   #main-nav a {
-    font-size:15px;
+    font-size: 15px;
     letter-spacing: 1.8px;
     padding: 0 14px;
   }
@@ -1664,14 +1771,6 @@ hr {
     letter-spacing: 0.2px;
   }
 
-  /****animations*****/
-
-
-  /***************************L desktop overlay********************************/
-  #overlay-content-box {
-    width: 1230px;
-  }
-
   /*****************************L desktop cards********************************/
   .container {
     width: 1230px;
@@ -1679,7 +1778,7 @@ hr {
 
   .card-container {
     padding:0;
-    margin-top: 70px;
+    /* margin-top: 70px; */
   }
 
   .img-box,
@@ -1745,10 +1844,13 @@ hr {
 
 @media (min-width: 1550px) {
   #main-nav {
-    left: 400px;
+    left: 459px;
   }
 
+  #page-nav {
+    left: 436px;
+  }
   .sticky-on #main-nav {
-    left: 400px;
+    left: 460px;
   }
 }

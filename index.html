@@ -4,12 +4,17 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/Normalise.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css" />
+    <link rel="stylesheet" href="css/owl.theme.default.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="css/stylesheet.css" />
-
   </head>
 
   <body>
+    <div id="cookies">
+      
+    </div>
+
 <!--           Mobile menu---------->
     <div id="mob-menu">
       <ul>
@@ -150,14 +155,34 @@
           </div></a>
 
           <main>
-            <div id="overlay-box"> <!--        Main overlay              -->
-              <div id="overlay-content-box">
-                <p>Dedicated Insolvency and Business Rescue Specialists <br /><br />
-                ... Experienced at taking the stress out of critical business situations<br /><br />
-                <span id="overlay-emph">Contact us on: 0800 331 7417</span></p>
-                <a id="overlay-btn" href="#">INSOLVENCY GUIDES</a>
+            <div class="owl-carousel">
+              <div class="ob" id="ob-1"> <!--        Main overlay              -->
+                <div id="ocb-1" class = "ocb">
+                  <p>Dedicated Insolvency and Business Rescue Specialists <br /><br /><br />
+                  ... Experienced at taking the stress out of critical business situations<br /><br /><br />
+                  <span id="extraEmph" class="overlay-emph">Contact us on: 0800 331 7417</span></p>
+                  <a id="ob-1-btn" class="ob-btn" href="#">INSOLVENCY GUIDES</a>
+                </div>
+              </div>
+              <div class = "ob" id="ob-2"> <!--        Main overlay              -->
+                <div id="ocb-2" class="ocb">
+                  <p>Need help, <strong style="font-size: 28px">fast</strong>?<br /><br />
+                    <span class="overlay-emph">Our friendly team are here when you need it most.</span><br /><br />
+                    Contact us for a free, no-strings-attached consultation.</p>
+                  <a id="ob-2-btn" class="ob-btn" href="#">BOOK YOUR APPOINTMENT NOW</a>
+                </div>
+              </div>
+              <div class = "ob" id="ob-3"> <!--        Main overlay              -->
+                <div id="ocb-3" class="ocb">
+                  <p>Our team is equipped to deal with even the most complex financial matters <br /><br />
+                    How can we help you?<br /><br /><br />
+                    <span class="overlay-emph">Find your solution today</span></p>
+                    <a id="ob-3-btn-1" class="ob-btn" href="#">Personal debt</a>
+                    <a id="ob-3-btn-2" class="ob-btn" href="#">Corporate debt</a>
+                </div>
               </div>
             </div>
+
 
             <div class="card-container container"> <!--           cards  ------>
               <div class="card">
@@ -347,6 +372,10 @@
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
   crossorigin="anonymous"></script>
-<script src="javascript/main.js"></script>
+  <script src="javascript/owl.carousel.min.js"></script>
+  <script src="javascript/main.js"></script>
+  <script src="javascript/owl-config.js"></script>
+
+
   </body>
 </html>
