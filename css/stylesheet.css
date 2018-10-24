@@ -32,15 +32,58 @@ hr {
   border-top: 1px solid #00c7de;
 }
 
+#cookies {
+  display: none;
+}
 
+/*****************mobile cookies************/
+ /*Should be a bar on the bottom for mobile, little box for laptop<*/
+
+#cookies{
+  height: 120px;
+  width: 200px;
+  border: solid 1px black;
+  background-color: rgb(159, 249, 159);;
+  position: fixed;
+  bottom: 0;
+  left:0;
+  /* display:none; */
+  z-index: 300;
+  padding: 10px;
+}
+
+#cookies p {
+  margin: 0 0 5px;
+}
+
+#cookies button {
+  display:block;
+  width: 85px;
+  margin: 0 auto;
+  background-color: #e1e1e1;
+  padding-bottom: 4px;
+}
+
+#cookies a {
+  color: black;
+  transition: color 0.2s ease-out;
+  text-decoration: underline;
+}
+#cookies a:hover {
+  color: rgb(124, 124, 124);
+}
+
+#cookie-br {
+  display: none;
+}
 
 /**********************************sticky live chat*****************/
 #sticky-chat {
   float: left;
   background-color: #d4ce39;
-  position: sticky;
-  top: 93.5%;
-  left: 100vw;
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
   margin-right: 5px;
   z-index: 4;
   width: 208px;
@@ -75,6 +118,13 @@ hr {
   display: none;
 }
 
+.owl-carousel *{
+  display:none;
+}
+
+/*****Cookies************/
+
+#
 
 
 /*************************MOBILE menu*********************************/
@@ -432,6 +482,7 @@ hr {
 .quote-box blockquote{
   margin: 35px 0;
   line-height: 46px;
+  text-align: center;
 }
 
 .quote-box img:nth-of-type(1) { /*Start Quote*/
@@ -462,7 +513,7 @@ hr {
   transition: background-color 0.3s ease-in;
 }
 #call-btn:hover,
-#ob-1-btnn:hover {
+.ob-btn:hover {
   background-color: #02b5c9;
   text-decoration: none;
 }
@@ -850,7 +901,7 @@ hr {
 
 /*************************Media Queries************************************/
 
-/**********************************Tablet********************************/
+/**********************************Large Mobile********************************/
 @media (min-width: 460px) { /*Include number*/
   .text-box {
     height: 140px;
@@ -884,13 +935,28 @@ hr {
 }
 
 
-@media (min-width: 598px) { /*Increase spacing*/
+@media (min-width: 598px) { /*Increase spacing of call and cookies*/
   .sticky-call h2 {
     font-size: 28px;
     letter-spacing:1.6px;
     left: 8px;
   }
 
+  #cookies {
+    width: 300px;
+    height: 104px;
+    padding: 8px 15px 10px;
+  }
+
+
+
+  #cookies p {
+    line-height: 20px;
+  }
+
+  #cookie-br{
+    display: inline;
+  }
 }
 
 @media (min-width:658px) {
@@ -922,6 +988,7 @@ hr {
     }
 }
 
+/**********Tablet*************/
 @media (min-width: 768px) {
   .container {
     width: 720px;
@@ -939,7 +1006,7 @@ hr {
   }
 
   .card {
-    max-width: 345px;
+    width: 345px;
   }
 
   .card:nth-of-type(3) .img-box,
@@ -987,14 +1054,6 @@ hr {
     content: "        /        ";
   }
 }
-/*******************************MQ to fix card displacement*****************************/
-@media (min-width: 934px) {
-  .card-container-fix {
-    position: relative;
-    right: 110px;
-    top: -9px;
-  }
-}
 
 /***************************************DESKTOP MQ************************************/
 @media (min-width: 992px) {
@@ -1016,6 +1075,8 @@ hr {
   .card-container-fix{
     position: static;
   }
+
+
 
   /*************************************D-Base Styles***************************/
   .container {
@@ -1472,9 +1533,11 @@ hr {
 
   /********************* Desktop Image overlay*************************************/
   /****Overlay base********/
-  .owl-carousel {
-    bottom:46px;
+
+  .owl-carousel *{
+    display: block;
   }
+
 
   .owl-stage-outer {
     width:100vw;
@@ -1522,24 +1585,27 @@ hr {
   }
 
   /****General*****/
+
   .ob {
     display: block;
     position: relative;
     height: 430px;
     margin-left: auto;
     margin-right: auto;
+    padding-top:80px;
   }
 
   .ocb {
     width: 800px;
     margin: 0 auto;
+    /* position: relative; */
   }
   .ocb p{
     margin-top:0;
     margin-bottom: 0;
     font-size: 24px;
-    line-height: 24px;
-    letter-spacing: 0.8px;
+    line-height: 40px;
+    letter-spacing: 1px;
     color: white;
     text-shadow:
       -1px -1px 0 #000,
@@ -1547,16 +1613,10 @@ hr {
       -1px 1px 0 #000,
       1px 1px 0 #000;
   }
-
-  .overlay-emph {
-    font-size:40px;
-    line-height: 56px;
-    font-weight: 600;
-  }
-
   .ob-btn {
     display: inline-block;
-    position: relative;
+    position: absolute;
+    bottom: 50px;
     background-color: #0099ab;
     color: white;
     box-shadow: 0px 2px #00555e;
@@ -1576,7 +1636,6 @@ hr {
     background-position: 50% 0%;
     background-repeat: no-repeat;
     background-size: 2200px 100%;
-    padding: 80px 0 0;
   }
 
   #ocb-1 {
@@ -1584,7 +1643,6 @@ hr {
   }
 
   #ob-1-btn {
-    margin-top: 50px;
     padding: 18px 50px 18px 35px;
   }
 
@@ -1600,8 +1658,12 @@ hr {
     height: 30px;
   }
 
-  #extraEmph{
-    margin-top: 16px;
+  #ocb-1-text{
+    line-height:50px;
+  }
+
+  #ocb-1-emph{
+    margin-top: 46px;
     font-size: 46px;
   }
   /******Image two*******/
@@ -1611,40 +1673,58 @@ hr {
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
-    padding-top: 70px;
   }
 
-  #ocb-2 {
-
+#ocb-2-emph {
+  display:inline-block;
+  line-height: 22px;
+  margin: 35px 0 26px;
+  font-size:40px;
+  font-weight: 600;
   }
 
   #ob-2-btn {
-    margin-top: 50px;
     padding: 18px 35px;
   }
 /******Image three*******/
-#ob-3 {
-  background-image: linear-gradient(rgba(0, 153, 171, 0.55), rgba(0, 153, 171, 0.3)),
-                    url("../img/piggy.jpg");
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  padding-top: 80px;
-}
+  #ob-3 {
+    background-image: linear-gradient(rgba(0, 153, 171, 0.55), rgba(0, 153, 171, 0.3)),
+                      url("../img/piggy.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  #ocb-3-text-2{
+    display: inline-block;
+    margin-top:30px;
+    font-size: 30px;
+  }
+
+  #ocb-3-emph {
+    display:inline-block;
+    line-height: 22px;
+    margin: 35px 0 26px;
+    font-size:40px;
+    font-weight: 600;
+  }
 
   #ob-3-btn-1,
   #ob-3-btn-2 {
     padding: 18px 35px;
-    margin-top:40px;
   }
 
   #ob-3-btn-1{
-    margin-left: 44px;
-    margin-right: 20px;
+    margin-left: 40px;
+
+  }
+
+  #ob-3-btn-2{
+    margin-left: 234px;
   }
 
   /******Cards*********/
   .card-container {
-    margin-top: 10px;
+    margin-top: 90px;
     justify-content: space-around;
     flex-wrap: wrap;
     max-width: none;
@@ -1690,6 +1770,21 @@ hr {
 /********************************L DESKTOP MQ**************************************************/
 @media (min-width:1262px) {
 
+  /******cookies**********/
+  #cookies {
+    width: 440px;
+    height: 120px;
+  }
+
+  #cookies button {
+    width: 105px;
+    height: 33px;
+  }
+
+  #cookies p {
+    font-size: 18px;
+    line-height: 30px;
+  }
 
   /********************************L header***************************/
   .container {
@@ -1778,7 +1873,7 @@ hr {
 
   .card-container {
     padding:0;
-    /* margin-top: 70px; */
+    margin-top: 90px;
   }
 
   .img-box,

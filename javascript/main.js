@@ -73,3 +73,21 @@ $(document).scroll(()=>{
     }
   }
 });
+
+//cookies
+const cookiebtn = $("#cookies button");
+const cookiebox = $("#cookies");
+
+setTimeout(()=>{
+  cookiebox.slideDown("slow");
+}, 2000);
+
+cookiebtn.click(()=>{
+  cookiebox.slideUp("slow");
+});
+
+
+//Sign up button
+$("#email").click(()=>{
+  $("#sign-up").slideDown("slow");
+});
