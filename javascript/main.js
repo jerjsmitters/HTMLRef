@@ -53,6 +53,7 @@ $(document).scroll(()=>{
 
       }else { //Desktop features
         $(".header").removeClass("header").addClass("sticky-header");
+        $(".sticky-logo").attr("src", "img/logo-mini.png");
       }
     }
 
@@ -69,7 +70,8 @@ $(document).scroll(()=>{
                   .css('height', '190px');
       $('.sticky-burger').attr('id', 'burger').removeClass('sticky-burger');
     }else {
-      $(".sticky-header").removeClass("sticky-header").addClass("header");
+      $(".sticky-header").removeClass("sticky-header").addClass("header")
+      $("#logo").attr("src", "img/logo.png");
     }
   }
 });
