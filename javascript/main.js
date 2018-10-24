@@ -40,7 +40,7 @@ $(document).scroll(()=>{
     if (fillVar) { //UNSTUCK -> STUCK
       $("#stickyboi").addClass("sticky-on");
       $('#logo').addClass('sticky-logo').removeAttr('id');
-      $('.card-container').addClass('card-container-fix'); //fixes misalignment issue
+      // $('.card-container').addClass('card-container-fix'); //fixes misalignment issue
       $("body").prepend("<div id='filler'></div>");
       $('#filler').css("height",`${headerHeight}`);
       fillVar = false; //So filler is only inserted once
@@ -60,7 +60,7 @@ $(document).scroll(()=>{
   } else { //STUCK->UNSTUCK
     $("#stickyboi").removeClass("sticky-on");
     $('.sticky-logo').attr('id', 'logo').removeClass('sticky-logo');
-    $('.card-container').removeClass('card-container-fix');
+    // $('.card-container').removeClass('card-container-fix');
     $("#filler").remove();
     fillVar=true;
     if (vpWidth < 992) { //Desktop features

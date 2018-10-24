@@ -122,11 +122,6 @@ hr {
   display:none;
 }
 
-/*****Cookies************/
-
-#
-
-
 /*************************MOBILE menu*********************************/
 
 #darken {
@@ -150,7 +145,7 @@ hr {
   position: fixed;
   justify-content: center;
   width: 200px;
-  height: 100vh;
+  height: 100vh;-A
   z-index: 1000;
   padding-top: 30px;
   right: -200px;
@@ -295,10 +290,15 @@ hr {
 /******Base styles******/
 .card-container {
   margin-top: 60px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
   margin-bottom: 3rem;
+  width: 300px;
 }
 
 .img-box {
@@ -662,8 +662,6 @@ hr {
   position: relative;
 }
 
-
-
 .business-hc-cont {
   border: #0099ab solid 1px;
 }
@@ -902,23 +900,13 @@ hr {
 /*************************Media Queries************************************/
 
 /**********************************Large Mobile********************************/
+
 @media (min-width: 460px) { /*Include number*/
-  .text-box {
-    height: 140px;
-  }
-
-  .card-container {
-    width: 428px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .sticky-call h2{
     visibility: visible;
   }
 }
 
-/* Include call us  */
 
 @media (min-width: 530px) { /*Include Call us*/
   .sticky-call {
@@ -948,8 +936,6 @@ hr {
     padding: 8px 15px 10px;
   }
 
-
-
   #cookies p {
     line-height: 20px;
   }
@@ -957,15 +943,16 @@ hr {
   #cookie-br{
     display: inline;
   }
+
+  .card {
+    width: 280px;
+  }
+  .card-container {
+    justify-content: space-around;
+  }
 }
 
 @media (min-width:658px) {
-  .text-box {
-    height: 110px;
-  }
-
-
-
   #mob-menu {
     width: 330px;
     height: 100vh;
@@ -988,34 +975,12 @@ hr {
     }
 }
 
-/**********Tablet*************/
+/**************************************Tablet********************/
 @media (min-width: 768px) {
   .container {
     width: 720px;
     margin-left: auto;
     margin-right: auto;
-  }
-
-
-/************************************TABLET cards****************/
-
-  .card-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .card {
-    max-width: 345px;
-  }
-
-  .card:nth-of-type(3) .img-box,
-  .card:nth-of-type(4) .img-box {
-    margin-top: 28px;
-  }
-
-  .text-box {
-    height: 140px;
   }
 
 /*********************TABLET welcome********************************/
@@ -1072,11 +1037,6 @@ hr {
     display: none;
   }
 
-  .card-container-fix{
-    position: static;
-  }
-
-
 
   /*************************************D-Base Styles***************************/
   .container {
@@ -1091,7 +1051,6 @@ hr {
     position: relative;
     margin-top:10px;
     height: 140.5px;
-
     }
 
   #logo {
@@ -1135,7 +1094,6 @@ hr {
     right: -600px;
     top:0px;
     /* width: 1000px; */
-
   }
 
   #main-nav>a:first-of-type { /**************home***********/
@@ -1181,7 +1139,6 @@ hr {
     left:0px;
     width:22px;
     z-index: 200;
-
   }
 
   #main-nav>a:nth-of-type(5)::before {
@@ -1341,13 +1298,9 @@ hr {
   .sticky-logo {
     width: 65.5px;
     background-color: rgba(255,255,255,0.05);
-
-
   }
 
-
   /**************************Desktop secondary nav*****************************/
-
     #page-nav {
     display: flex;
     position: relative;
@@ -1382,7 +1335,6 @@ hr {
   }
 
   /******Dropdown******/
-
   #services,
   #insolv,
   #cred {
@@ -1675,13 +1627,13 @@ hr {
     background-position: center;
   }
 
-#ocb-2-emph {
-  display:inline-block;
-  line-height: 22px;
-  margin: 35px 0 26px;
-  font-size:40px;
-  font-weight: 600;
-  }
+  #ocb-2-emph {
+    display:inline-block;
+    line-height: 22px;
+    margin: 35px 0 26px;
+    font-size:40px;
+    font-weight: 600;
+    }
 
   #ob-2-btn {
     padding: 18px 35px;
@@ -1729,13 +1681,16 @@ hr {
     flex-wrap: wrap;
     max-width: none;
   }
+  .text-box,
+  .img-box {
+    width: auto;
+  }
 
   .card {
-    max-width: none;
+    width: 400px;
   }
 
   .text-box {
-    width: 455px;
     height: 130px;
   }
 
@@ -1816,15 +1771,6 @@ hr {
     padding: 0 14px;
   }
 
-  /* #main-nav>a:nth-of-type(5) img {
-    position: relative;
-    bottom: 44px;
-    left:-16px;
-    width:24px;
-    font-weight: 700px;
-    z-index: 200;
-  } */
-
   #main-nav>a:last-of-type {
     font-size: 28px;
     font-weight: 500;
@@ -1876,8 +1822,7 @@ hr {
     margin-top: 90px;
   }
 
-  .img-box,
-  .text-box {
+  .card {
     width: 278px;
   }
 
