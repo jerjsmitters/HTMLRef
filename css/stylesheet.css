@@ -295,15 +295,10 @@ hr {
 /******Base styles******/
 .card-container {
   margin-top: 60px;
-  display: flex;
-  /* flex-direction:column; */
-  justify-content: center;
-  flex-wrap: wrap;
 }
 
 .card {
   margin-bottom: 3rem;
-  width:300px;
 }
 
 .img-box {
@@ -912,7 +907,11 @@ hr {
     height: 140px;
   }
 
-
+  .card-container {
+    width: 428px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   .sticky-call h2{
     visibility: visible;
@@ -949,6 +948,8 @@ hr {
     padding: 8px 15px 10px;
   }
 
+
+
   #cookies p {
     line-height: 20px;
   }
@@ -962,6 +963,8 @@ hr {
   .text-box {
     height: 110px;
   }
+
+
 
   #mob-menu {
     width: 330px;
@@ -1003,7 +1006,7 @@ hr {
   }
 
   .card {
-    width: 345px;
+    max-width: 345px;
   }
 
   .card:nth-of-type(3) .img-box,
