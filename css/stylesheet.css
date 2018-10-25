@@ -12,7 +12,7 @@ a {
 }
 
 .container {
-  margin: 0 16px;
+  margin: 0 32px;
 }
 
 body {
@@ -30,6 +30,7 @@ hr {
   border: none;
   height: 0;
   border-top: 1px solid #00c7de;
+  margin-bottom: 0px;
 }
 
 #cookies {
@@ -39,43 +40,43 @@ hr {
 /*****************mobile cookies************/
  /*Should be a bar on the bottom for mobile, little box for laptop<*/
 
-#cookies{
-  height: 120px;
-  width: 200px;
-  border: solid 1px black;
-  background-color: rgb(159, 249, 159);;
-  position: fixed;
-  bottom: 0;
-  left:0;
-  /* display:none; */
-  z-index: 300;
-  padding: 10px;
-}
+ #cookies{
+   height: 120px;
+   width: 200px;
+   border: solid 3px #007380;
+   border-radius: 7px;
+   background-color: #0099ab;
+   position: fixed;
+   bottom: 0;
+   left:0;
+   /* display:none; */
+   z-index: 300;
+   padding: 10px;
+ }
 
-#cookies p {
-  margin: 0 0 5px;
-}
+ #cookies p {
+   margin: 0 0 5px;
+   color: white;
+ }
 
-#cookies button {
-  display:block;
-  width: 85px;
-  margin: 0 auto;
-  background-color: #e1e1e1;
-  padding-bottom: 4px;
-}
+ #cookies button {
+   display:block;
+   width: 85px;
+   margin: 0 auto;
+   background-color: #007380;
+   border-color: #00e5ff;
+   color: white;
+   padding-bottom: 4px;
+ }
 
-#cookies a {
-  color: black;
-  transition: color 0.2s ease-out;
-  text-decoration: underline;
-}
-#cookies a:hover {
-  color: rgb(124, 124, 124);
-}
-
-#cookie-br {
-  display: none;
-}
+ #cookies a {
+   color: white;
+   transition: font-size 0.2s ease-out;
+   text-decoration: underline;
+ }
+ #cookies a:hover {
+   font-size: 20px;
+ }
 
 /**********************************sticky live chat*****************/
 #sticky-chat {
@@ -181,7 +182,7 @@ hr {
 }
 
 #logo {
-  width: 185px;
+  width: 145px;
 }
 
 #burger {
@@ -223,6 +224,7 @@ hr {
 /**************Sticky header***********/
 #logo {
   transition: width 0.2s ease-out;
+  margin-left: 32px;
 }
 
 .sticky-logo {
@@ -289,7 +291,7 @@ hr {
 /****************************MOBILE Cards ******************************/
 /******Base styles******/
 .card-container {
-  margin-top: 60px;
+  margin-top: 45px;
   margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
@@ -297,8 +299,7 @@ hr {
 }
 
 .card {
-  margin-bottom: 3rem;
-  width: 300px;
+  margin-bottom: 48px;
 }
 
 .img-box {
@@ -344,7 +345,7 @@ hr {
 
 #busi-img {
   background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0,0,0,0.5)),
-  url("../img/Service-for-busi.jpg");
+  url("../img/services2.jpg");
 }
 
 #prof-img {
@@ -814,13 +815,14 @@ hr {
 }
 
 .cred-img-box img:nth-of-type(1) { /*ICAEW*/
-  width: 55%;
+  width: 210px;
+  height: 70px;
+  margin-top: 7px;
   margin-left: 18px;
   max-width: 297px;
 }
 .cred-img-box img:nth-of-type(2) {
-  width: 17%;
-  max-width: 87px;
+  width:87px;
   margin-right: 15px;
 }
 
