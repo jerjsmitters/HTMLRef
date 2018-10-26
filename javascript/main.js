@@ -48,7 +48,7 @@ $(document).scroll(()=>{
       if (vpWidth < 992){ //Mobile features
         $('.call').addClass('sticky-call').removeClass('call');
         $('.header').css("backgroundImage", "linear-gradient(#0ce5ff, #06cbe2, #0099ab)")
-                    .css('height', '92px');
+                    .css('height', '80px');
         $('#burger').addClass('sticky-burger').removeAttr('id');
 
       }else { //Desktop features
