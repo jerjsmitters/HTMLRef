@@ -40,16 +40,18 @@ $(document).scroll(()=>{
     if (fillVar) { //UNSTUCK -> STUCK
       $("#stickyboi").addClass("sticky-on");
       $('#logo').addClass('sticky-logo').removeAttr('id');
-      // $('.card-container').addClass('card-container-fix'); //fixes misalignment issue
       $("body").prepend("<div id='filler'></div>");
       $('#filler').css("height",`${headerHeight}`);
+
       fillVar = false; //So filler is only inserted once
 
       if (vpWidth < 992){ //Mobile features
         $('.call').addClass('sticky-call').removeClass('call');
-        $('.header').css("backgroundImage", "linear-gradient(#0ce5ff, #06cbe2, #0099ab)")
+        $('.header').css("backgroundImage", "linear-gradient(#0ce5ff, #0099ab)")
                     .css('height', '80px');
         $('#burger').addClass('sticky-burger').removeAttr('id');
+        $('#mob-menu').css("backgroudColor", "none")
+                      .css("backgroundImage", "linear-gradient(rgb(12, 229, 255) 0%, rgb(0, 153, 171) 8.7%, #008999)");
 
       }else { //Desktop features
         $(".header").removeClass("header").addClass("sticky-header");
@@ -63,12 +65,13 @@ $(document).scroll(()=>{
     // $('.card-container').removeClass('card-container-fix');
     $("#filler").remove();
     fillVar=true;
-    if (vpWidth < 992) { //Desktop features
-
+    if (vpWidth < 992) { //Mobile features
       $('.sticky-call').addClass('call').removeClass('sticky-call');
       $('.header').css("backgroundImage", "none")
                   .css('height', '190px');
       $('.sticky-burger').attr('id', 'burger').removeClass('sticky-burger');
+      $('#mob-menu').css("backgroudColor", "#0099ab")
+                    .css("backgroundImage", "none");
     }else {
       $(".sticky-header").removeClass("sticky-header").addClass("header")
       $("#logo").attr("src", "img/logo.png");
