@@ -1,0 +1,173 @@
+
+/********************************L DESKTOP MQ**************************************************/
+@media (min-width:1262px) {
+
+  /******cookies**********/
+  #cookies {
+    width: 440px;
+    height: 120px;
+  }
+
+  #cookies button {
+    width: 105px;
+    height: 33px;
+  }
+
+  #cookies p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  /********************************L header***************************/
+  .container {
+    width:980px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .header {
+    height: 177px;
+    /* width:1200px; */
+    /* padding: 0 10px; */
+    margin-top: 0;
+  }
+
+  #logo {
+    width: 233px;
+    height: 100%;
+  }
+
+  #main-nav {
+    bottom: 177px;
+    left: 290px;
+  }
+
+  #main-nav a {
+    font-size: 15px;
+    letter-spacing: 1.8px;
+    padding: 0 14px;
+  }
+
+  #main-nav>a:last-of-type {
+    font-size: 28px;
+    font-weight: 500;
+  }
+
+  #page-nav {
+    bottom: 177px;
+    left: 400px;
+    height: 128px;
+  }
+
+  #page-nav a {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    line-height: 128px;
+    height: 128px;
+  }
+
+  /****drop downs*****/
+  #services-dropdown,
+  #insolv-dropdown,
+  #cred-dropdown {
+    top: 127px;
+  }
+  #services-dropdown {
+    width: 1230px;
+    height: 283.5px;
+    left: -420px;
+  }
+
+  #services-dropdown ul li {
+    width: 307.5px;
+    letter-spacing: 0.2px;
+  }
+
+  #insolv-dropdown ul li,
+  #cred-dropdown ul li {
+    letter-spacing: 0.2px;
+  }
+
+  /*****************************L desktop cards********************************/
+  .container {
+
+  }
+
+  .card-container {
+    padding:0;
+    margin-top: 90px;
+  }
+
+  .card {
+    width: 278px;
+  }
+
+  .card:nth-of-type(3) .img-box,
+  .card:nth-of-type(4) .img-box {
+    margin-top: 0px;
+  }
+
+  .text-box {
+    height: 170px;
+  }
+
+  .text-box:nth-of-type(2) {
+    letter-spacing: 0.8px;
+  }
+
+  /************************ XL Desktop Two column layout*********************/
+
+  .welcome {
+    width: 922.5px;
+    padding: 0;
+    margin-left: 0;
+    margin-right: 40px;
+  }
+
+  .quote-vid-box {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .quote-box {
+    position: relative;
+    bottom: 22px;
+    width: 277.5px;
+    align-self: flex-start;
+    margin-top:0;
+    margin-left:32px;
+  }
+
+  .vid {
+    width: 560px;
+    height: 320px;
+  }
+
+  .welcome p:last-of-type {
+    margin-bottom: 15px;
+  }
+
+  .side-bar {
+    width: 307.5px;
+    padding: 0;
+    margin-right:0;
+  }
+
+  .cred {
+    margin: 50px auto 30px;
+  }
+}
+
+@media (min-width: 1550px) {
+  #main-nav {
+    left: 459px;
+  }
+
+  #page-nav {
+    left: 436px;
+  }
+  .sticky-on #main-nav {
+    left: 460px;
+  }
+}

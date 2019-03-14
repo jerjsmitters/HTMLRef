@@ -1,128 +1,3 @@
-
-
-/*************************Media Queries************************************/
-
-/**********************************Large Mobile********************************/
-
-@media (min-width: 460px) { /*Include number*/
-  .sticky-call h2{
-    visibility: visible;
-  }
-}
-
-
-@media (min-width: 530px) { /*Include Call us*/
-  .sticky-call {
-    left: 25px;
-  }
-
-  .sticky-call h2 {
-    font-size: 24px;
-    letter-spacing:0.8px;
-  }
-  #deletey {
-    display: inline;
-  }
-}
-
-
-@media (min-width: 598px) { /*Increase spacing of call and cookies*/
-  .sticky-call h2 {
-    font-size: 28px;
-    letter-spacing:1.6px;
-    left: 8px;
-  }
-
-  #cookies {
-    width: 300px;
-    height: 104px;
-    padding: 8px 15px 10px;
-  }
-
-  #cookies p {
-    line-height: 20px;
-  }
-
-  #cookie-br{
-    display: inline;
-  }
-
-  .card {
-    width: 280px;
-  }
-  .card-container {
-    justify-content: space-around;
-  }
-}
-
-@media (min-width:658px) {
-  #mob-menu {
-    width: 330px;
-    height: 100vh;
-    padding-top: 30px;
-    right: -330px;
-  }
-
-  #mob-menu>ul {
-    width:70%;
-  }
-
-  #mob-menu li {
-    width: auto;
-    padding: 20px;
-    padding-right: 50px;
-    padding-left: 10px;
-    margin: 0 auto;
-    letter-spacing: 1.5px;
-    font-size: 16px;
-    }
-}
-
-/**************************************Tablet********************/
-@media (min-width: 768px) {
-  .container {
-    width: 720px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-/*********************TABLET welcome********************************/
-  .welcome h1 {
-    margin-top: 0;
-  }
-
-  .welcome p {
-    margin: 24px 0;
-  }
-
-  .welcome p:nth-of-type(3) {
-    margin-top: 40px;
-  }
-
-  .button-box {
-    display:flex;
-    justify-content: flex-start;
-    margin-bottom: 14px;
-  }
-
-  .button-box a {
-    height: 52px;
-    padding: 13.6px 20px;
-  }
-
-  #call-btn {
-    margin-right: 20px;
-  }
-  /**************** TABLET footer*******************************************/
-  .footer-nav a {
-    font-size: 14px;
-  }
-  .footer-nav a:not(:last-child)::after {
-    white-space: pre;
-    content: "        /        ";
-  }
-}
-
 /***************************************DESKTOP MQ************************************/
 @media (min-width: 992px) {
   /****hiding mobile features & fixes****/
@@ -143,7 +18,7 @@
 
   /*************************************D-Base Styles***************************/
   .container {
-    width:980px;
+    width:900px;
     margin: 0 auto;
   }
 
@@ -152,22 +27,44 @@
 /****Unstuck Header****/
   .header {
     position: relative;
-    margin-top:10px;
-    height: 140.5px;
+    height: 154px;
     }
 
-  #logo {
-    width: 185px;
-    height: 140.5px;
+  #header-top{
+    height:100%;
   }
 
-  /**********************************D-top nav*****************************/
-  #main-nav {
-    display: flex;
-    position: relative;
-    bottom: 152px;
-    left: 218px;
+  #logo {
+    width: 163px;
+    height: 130px;
+    margin-right: 734px;
+    align-self: flex-end;
   }
+
+
+
+  /**********************************navs*****************************/
+
+  /***nav positioning and config****/
+  #main-nav{
+    top: 0;
+    right: -24px;
+    position: absolute;
+    display: flex;
+  }
+
+  #page-nav {
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 45px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 740px;
+}
+
+  /****************************************main-nav*******/
+
 
   #main-nav>a,
   #about-us>a,
@@ -392,28 +289,18 @@
   }
 
   .sticky-on #main-nav {
-    margin-top: 0px;
-    position: relative;
-    bottom: 104%;
-    left: 200px;
+    position: absolute;
+    /* left: 200px; */
   }
 
   .sticky-logo {
     width: 65.5px;
+    height: 51px;
     background-color: rgba(255,255,255,0.05);
+    margin-right: 832px;
   }
 
   /**************************Desktop secondary nav*****************************/
-    #page-nav {
-    display: flex;
-    position: relative;
-    bottom: 153px;
-    left: 196px;
-    justify-content: center;
-    align-items: flex-start;
-    width: 722px;
-  }
-
   #page-nav>a,
   #services>a,
   #insolv>a,
@@ -647,7 +534,7 @@
     height: 430px;
     margin-left: auto;
     margin-right: auto;
-    padding-top:80px;
+    padding-top:70px;
   }
 
   .ocb {
@@ -670,8 +557,9 @@
   }
   .ob-btn {
     display: inline-block;
+    height: 52px;
     position: absolute;
-    bottom: 50px;
+    bottom: 70px;
     background-color: #0099ab;
     color: white;
     box-shadow: 0px 2px #00555e;
@@ -680,6 +568,7 @@
     font-weight: bold;
     letter-spacing: 1px;
     transition: background-color 0.3s ease-in;
+    text-transform: uppercase;
   }
 
   /*******Image one******/
@@ -718,7 +607,6 @@
   }
 
   #ocb-1-emph{
-    margin-top: 46px;
     font-size: 46px;
   }
   /******Image two*******/
@@ -732,10 +620,9 @@
 
   #ocb-2-emph {
     display:inline-block;
-    line-height: 22px;
-    margin: 35px 0 26px;
-    font-size:40px;
-    font-weight: 600;
+    line-height: 44px;
+    margin: 18px 0;
+    font-size: 40px;
     }
 
   #ob-2-btn {
@@ -747,54 +634,77 @@
                       url("../img/piggy.jpg");
     background-repeat: no-repeat;
     background-size: 100% 100%;
+    position: relative;
+  }
+
+  #ocb-3 p{
+    line-height: 30px;
   }
 
   #ocb-3-text-2{
     display: inline-block;
-    margin-top:30px;
-    font-size: 30px;
+    font-size: 32px;
   }
 
   #ocb-3-emph {
     display:inline-block;
-    line-height: 22px;
-    margin: 35px 0 26px;
+    line-height: 30px;
+    margin-top: 30px;
     font-size:40px;
-    font-weight: 600;
+  }
+
+  #ocb-3-btn-box{
+    position: absolute;
+    bottom: 70px;
   }
 
   #ob-3-btn-1,
   #ob-3-btn-2 {
     padding: 18px 35px;
+    position: static;
+    width: 250px;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 14px;
+
   }
 
   #ob-3-btn-1{
-    margin-left: 40px;
-
+    margin-right: 25px;
   }
 
   #ob-3-btn-2{
-    margin-left: 234px;
+    /* margin-left: 234px; */
   }
 
   /******Cards*********/
   .card-container {
     margin-top: 90px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    max-width: none;
+    justify-content: space-between;
+
   }
   .text-box,
   .img-box {
     width: auto;
+
   }
 
   .card {
-    width: 400px;
+    width: 420px;
   }
 
   .text-box {
-    height: 130px;
+    height: 150px;
+    font-size: 18px;
+  }
+
+  .text-box a {
+    font-size: 12px;
+    left:20px;
+  }
+
+  .img-box{
+    height: 195px;
   }
 
 /*******************************DESKTOP Two column layout****************/
@@ -802,15 +712,18 @@
   .columns {
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
   }
   .welcome {
-    max-width: none;
-    width: 650px;
-    margin: 0 40px 0 15px;
+    width: 540px;
   }
   .side-bar {
     width: 294px;
-    margin-right: 15px;
+  }
+
+/********why choose us+call btn?************/
+  .button-box a{
+    width: 258px;
   }
 /*******Credentials***********/
   .cred {
@@ -821,179 +734,5 @@
   }
   .cred p {
     width: 940px;
-  }
-}
-
-
-/********************************L DESKTOP MQ**************************************************/
-@media (min-width:1262px) {
-
-  /******cookies**********/
-  #cookies {
-    width: 440px;
-    height: 120px;
-  }
-
-  #cookies button {
-    width: 105px;
-    height: 33px;
-  }
-
-  #cookies p {
-    font-size: 18px;
-    line-height: 30px;
-  }
-
-  /********************************L header***************************/
-  .container {
-    width:980px;
-    margin: 0 auto;
-    padding: 0 10px;
-  }
-
-  .header {
-    height: 177px;
-    /* width:1200px; */
-    /* padding: 0 10px; */
-    margin-top: 0;
-  }
-
-  #logo {
-    width: 233px;
-    height: 100%;
-  }
-
-  #main-nav {
-    bottom: 177px;
-    left: 290px;
-  }
-
-  #main-nav a {
-    font-size: 15px;
-    letter-spacing: 1.8px;
-    padding: 0 14px;
-  }
-
-  #main-nav>a:last-of-type {
-    font-size: 28px;
-    font-weight: 500;
-  }
-
-  #page-nav {
-    bottom: 177px;
-    left: 400px;
-    height: 128px;
-  }
-
-  #page-nav a {
-    font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 1.2px;
-    line-height: 128px;
-    height: 128px;
-  }
-
-  /****drop downs*****/
-  #services-dropdown,
-  #insolv-dropdown,
-  #cred-dropdown {
-    top: 127px;
-  }
-  #services-dropdown {
-    width: 1230px;
-    height: 283.5px;
-    left: -420px;
-  }
-
-  #services-dropdown ul li {
-    width: 307.5px;
-    letter-spacing: 0.2px;
-  }
-
-  #insolv-dropdown ul li,
-  #cred-dropdown ul li {
-    letter-spacing: 0.2px;
-  }
-
-  /*****************************L desktop cards********************************/
-  .container {
-    width: 1230px;
-  }
-
-  .card-container {
-    padding:0;
-    margin-top: 90px;
-  }
-
-  .card {
-    width: 278px;
-  }
-
-  .card:nth-of-type(3) .img-box,
-  .card:nth-of-type(4) .img-box {
-    margin-top: 0px;
-  }
-
-  .text-box {
-    height: 170px;
-  }
-
-  .text-box:nth-of-type(2) {
-    letter-spacing: 0.8px;
-  }
-
-  /************************ XL Desktop Two column layout*********************/
-
-  .welcome {
-    width: 922.5px;
-    padding: 0;
-    margin-left: 0;
-    margin-right: 40px;
-  }
-
-  .quote-vid-box {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .quote-box {
-    position: relative;
-    bottom: 22px;
-    width: 277.5px;
-    align-self: flex-start;
-    margin-top:0;
-    margin-left:32px;
-  }
-
-  .vid {
-    width: 560px;
-    height: 320px;
-  }
-
-  .welcome p:last-of-type {
-    margin-bottom: 15px;
-  }
-
-  .side-bar {
-    width: 307.5px;
-    padding: 0;
-    margin-right:0;
-  }
-
-  .cred {
-    margin: 50px auto 30px;
-  }
-}
-
-@media (min-width: 1550px) {
-  #main-nav {
-    left: 459px;
-  }
-
-  #page-nav {
-    left: 436px;
-  }
-  .sticky-on #main-nav {
-    left: 460px;
   }
 }

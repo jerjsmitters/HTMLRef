@@ -74,14 +74,14 @@ hr {
    text-decoration: underline;
  }
  #cookies a:hover {
-   font-size: 20px;
+   font-size: 18px;
  }
 
 /**********************************sticky live chat*****************/
 #sticky-chat {
   float: left;
-  background-color: #00AB68;
-  border: 2px solid #005f39;
+  background-color: #00c2da;
+  border: 2px solid #007c8c;
   border-radius: 5px;
   position: fixed;
   bottom: 5px;
@@ -97,7 +97,7 @@ hr {
 }
 
 #sticky-chat:hover {
-  background-color: #00c578;
+  background-color: #02e3ff;
 }
 
 #sticky-chat img {
@@ -327,10 +327,6 @@ hr {
   z-index: 2000;
 }
 
-#stickyboi .header {
-  height: 80px;
-}
-
 .sticky-on {
   position: fixed;
   top: 0px;
@@ -362,9 +358,8 @@ hr {
 /********Icon********/
 .img-box img {
   position:absolute;
-  left: 50%;
-  margin-left: -34.2px;
-  margin-top: -34.2px;
+  left: 41%;
+  top: -34px;
   width:68px;
   border:9px solid white;
   border-radius: 50%;
@@ -577,7 +572,7 @@ hr {
   font-size: 20px;
   color: white;
   background-color: #0099ab;
-  box-shadow: 0 2px 0px #00555e;
+  box-shadow: 2px 2px 2px #00555e;
   transition: background-color 0.3s ease-in;
 }
 #call-btn:hover,
@@ -591,6 +586,7 @@ hr {
   font-size: 16px;
   font-weight: 600;
   transition: background-color 0.3s ease-in;
+  box-shadow: 2px 2px 2px #7f7f7f;
 }
 
 #why-btn:hover{
@@ -615,16 +611,16 @@ hr {
 }
 
 .sidebtn-box li:hover {
-  background-color:#00c578;
+  background-color:#02e3ff;
 }
 
 .sidebtn-box li {
-  border: 2px solid #005f39;
+  background-color: #00c2da;
+  border: 2px solid #007c8c;
   border-radius: 5px;
   padding: 0.4rem 0 10px;
   height:46px;
   color: white;
-  background-color: #00AB68;
   transition: background-color 0.1s ease-in;
 }
 
@@ -819,8 +815,14 @@ hr {
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 14px;
+  transition: 0.2s background-color, border ease-out;
   }
 
+
+.misc-buttons li:hover {
+  border: 2px #ddd solid;
+  background-color: #eee;
+}
 /****Social Media Buttons******/
 .social-media {
   display:flex;
