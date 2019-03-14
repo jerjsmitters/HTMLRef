@@ -7,9 +7,11 @@ $(document).ready(function(){
       loop: true,
       nav: true,
       navText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>'],
-      // autoplay:true,
+      autoplay:true,
       autoplayTimeout:5000,
-      autoplayHoverPause:true
+      autoplayHoverPause:true,
+      slideTransition: 'ease-out',
+      smartSpeed: 500
     }
   );
 });
