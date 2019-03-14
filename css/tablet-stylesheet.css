@@ -1,0 +1,187 @@
+
+
+/*************************Media Queries************************************/
+
+/**********************************Large Mobile********************************/
+
+@media (min-width: 500px){
+  .text-box{
+    font-size: 17px;
+    padding-top:11px;
+  }
+
+  .text-box a{
+    left: 21px;
+    bottom: 15px;
+  }
+
+  .text-box p{
+    margin: 0px 5% 50px;
+  }
+
+
+  .img-box img {
+    left: 42%;
+  }
+}
+
+
+@media (min-width: 550px) { /*Increase spacing of call and cookies, cards fixed height+header changed to align*/
+  #logo{
+    margin:0;
+    height: 110px;
+    margin-right: 300px;
+  }
+  .sticky-logo {
+    height: 80px;
+    position: static;
+    margin-right: 338px;
+  }
+
+  #header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  #cookies {
+    width: 300px;
+    height: 104px;
+    padding: 8px 15px 10px;
+  }
+
+  #cookies p {
+    line-height: 20px;
+    margin-bottom: 2px;
+  }
+
+  #cookie-br{
+    display: inline;
+  }
+
+  .card {
+    width: 443px;
+  }
+
+  .img-box img {
+    left: 43%;
+  }
+}
+
+@media (min-width: 720px) {/***card two column layout+logo alignment***/
+
+  #logo {
+    margin-right: 458px;
+  }
+  .sticky-logo{
+    margin-right: 496px;
+  }
+
+  .container{
+    width: 603px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .card-container{
+    justify-content: space-between;
+  }
+
+  .card {
+    width: 290px;
+  }
+
+  .img-box img {
+    left: 40%;
+  }
+
+  .text-box{
+    font-size:16px;
+    height:157px;
+  }
+
+  .text-box a{
+    left:14px;
+    font-size: 11px;
+    bottom: 11px;
+  }
+}
+
+
+@media (min-width: 768px) {
+
+  .img-box img {
+    left: 42%;
+  }
+
+  .welcome h1 {
+    margin-top: 0;
+  }
+
+  .welcome p {
+    margin: 24px 0;
+  }
+
+  .welcome p:nth-of-type(3) {
+    margin-top: 40px;
+  }
+
+  .quote-box blockquote {
+    font-size: 17px;
+  }
+
+  .button-box {
+    display:flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+  }
+
+  .button-box a {
+    height: 52px;
+    padding: 13.6px 20px;
+    width: 350px;
+  }
+
+  #call-btn {
+    margin-top: 16px;
+  }
+
+  /**************** TABLET footer*******************************************/
+  .footer-nav a {
+    font-size: 14px;
+  }
+  .footer-nav a:not(:last-child)::after {
+    white-space: pre;
+    content: "        /        ";
+  }
+}
+
+
+@media (min-width: 860px){ /*card changes, big quote and logo alignment***/
+  #logo{
+    margin-right: 591px;
+  }
+
+  .sticky-logo{
+    margin-right: 628px;
+  }
+  .container {
+    width: 735px;
+  }
+  .card-container{
+    margin-top: 60px;
+  }
+  .card {
+    width: 350px;
+  }
+  .text-box{
+    padding-top: 15px;
+    height: 140px;
+  }
+  .text-box p {
+    font-size: 17px;
+  }
+
+  .quote-box blockquote {
+    font-size: 18px;
+  }
+}

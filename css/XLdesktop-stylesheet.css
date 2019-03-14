@@ -1,0 +1,189 @@
+@media (min-width: 1175px){
+
+  .sticky-logo{
+    margin-right: 1022px;
+  }
+
+  #logo {
+    margin-right: 924px;
+  }
+
+  #main-nav{
+    right: 100px;
+  }
+
+  #page-nav{
+    right: 169px;
+  }
+
+  .container {
+    width: 1090px;
+  }
+
+  .card {
+    width: 260px;
+  }
+
+  .text-box {
+    height: 170px;
+  }
+  .text-box p{
+    letter-spacing: 1.2px;
+    text-align: left;
+    line-height: 18px;
+    margin: 0 6% 50px;
+  }
+  .text-box a{
+    left: 16px;
+  }
+
+  .img-box {
+
+  }
+
+  .img-box img {
+    top:-37px;
+    left:96px;
+  }
+
+  .img-box p{
+    left: 5%;
+  }
+
+  .welcome{
+    width: 730px;
+  }
+
+  .side-bar{
+
+  }
+
+  .quote-box blockquote{
+    font-size: 22px;
+  }
+
+  .button-box a{
+    width: 355px;
+  }
+
+}
+
+@media (min-width: 1300px) {
+
+  .sticky-logo{
+    margin-right:1132px
+  }
+
+  #logo {
+    margin-right: 1034px;
+  }
+
+  #main-nav{
+    right: 92px;
+  }
+  #page-nav{
+    right: 253px;
+  }
+
+  #page-nav>a, #services>a, #insolv>a, #cred>a,
+  #main-nav>a, #about-us>a, #news>a {
+    font-size: 14px;
+  }
+
+  #main-nav>a:last-of-type{
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .container{
+    width: 1200px;
+  }
+
+  .card {
+    width: 290px
+  }
+
+  .welcome {
+    width: 825px;
+  }
+
+  .side-bar{
+    width: 315px;
+  }
+
+  .button-box a{
+    width: 400px;
+  }
+
+}
+
+
+@media (min-width:1600px) {
+
+  .sticky-logo{
+    margin-right: 1330px;
+  }
+
+  #logo{
+    margin-right: 1234px;
+  }
+
+  #main-nav{
+    right: 355px;
+  }
+
+  #page-nav {
+    right: 517px;
+  }
+
+
+  h1 {
+    font-size: 38px;
+  }
+  h4 {
+    font-size: 20px;
+    margin: 30px 0 40px;
+  }
+  .container {
+    width: 1400px;
+  }
+
+  .card {
+    width: 330px;
+  }
+
+  .img-box img {
+    left:131px;
+  }
+  .welcome {
+    width: 930px;
+  }
+
+  .welcome p{
+    font-size: 17px;
+  }
+
+  .text-box {
+    height: 160px;
+  }
+
+  .text-box p{
+    letter-spacing: 1px;
+    line-height: 20px;
+  }
+
+  .text-box a {
+    left: 20px;
+  }
+  .side-bar{
+    width: 400px;
+  }
+
+  .button-box a{
+    width: 455px;
+  }
+
+  #why-btn {
+    font-size: 20px;
+  }
+}
